@@ -1,0 +1,17 @@
+
+<div class="card">
+ 
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p><%= @friend.first_name %> <%= @friend.last_name %></p>
+      <footer class="blockquote-footer"><%= @friend.email %> | <cite title="Source Title"><%= @friend.phone %> | <%= @friend.twitter %></cite></footer>
+    </blockquote>
+  </div>
+</div>
+
+<br>
+
+<%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> 
+<%= link_to 'Delete', @friend, method: :delete, class:"btn btn-danger" ,data: { confirm: 'Are you sure?' } %>
+
+<%= link_to 'Back', friends_path, class:"btn btn-secondary" %>
